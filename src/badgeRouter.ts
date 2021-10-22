@@ -1,44 +1,32 @@
 import express from 'express';
-import dayjs from 'dayjs';
-import timezone from 'dayjs/plugin/timezone';
-import utc from 'dayjs/plugin/utc';
+// import dayjs from 'dayjs';
+// import timezone from 'dayjs/plugin/timezone';
+// import utc from 'dayjs/plugin/utc';
 import { createBadge } from './createBadge';
 import { sendText } from './sendText';
 
 
-dayjs.extend(utc);
-dayjs.extend(timezone);
+// dayjs.extend(utc);
+// dayjs.extend(timezone);
 
 /**
- * 군 복무 D-Day Badge를 만들어 주는 Router 입니다.
+ * Badge를 만들어 주는 Router 입니다.
  * @param req express.Request
  * @param res express.Response
  * @returns
  */
 export async function badgeRouter(req: express.Request, res: express.Response): Promise<void> {
-	if (typeof req.query.endDate !== 'string') {
+	console.debug('got 1 req')
+	if (typeof req.query.githubUserName !== 'string') {
 		sendText('400 Bad Request', res);
 		return;
 	}
-	let division = ""
-	if (typeof req.query.division !== 'string'){
-		division="none"
-	}
-	else{
-		division = req.query.division;
-	}
-	const endDate = dayjs(req.query.endDate);
-	
-	const currentDate = dayjs().tz('Asia/Seoul').format('YYYYMMDD');
-	const leftDate = endDate.diff(currentDate, 'day');
-	console.debug(leftDate)
-	if (isNaN(leftDate) === true) {
-		sendText('400 Bad Request', res);
-		return;
-	}	
+	const githubUserName = req.query.githubUserName;
+
+	console.debug(githubUserName)
 	
 	res.set('Content-Type','image/svg+xml');
 	res.set('Cache-Control', 'no-cache');
 
-	res.send(await createBadge(division,leftDate));
+	res.send(await createBadge(githubUserName));
 }

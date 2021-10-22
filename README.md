@@ -1,39 +1,32 @@
-# 군복무 D - Day 뱃지
+# 핵토버페스트 뱃지
 
-![soldierDate](http://goonba.xyz/?endDate=20211218)
-![soldierDate](http://goonba.xyz/?division=navy&endDate=20211218)
-![soldierDate](http://goonba.xyz/?division=airforce&endDate=20211218)
-![soldierDate](http://goonba.xyz/?division=marine&endDate=20211218)
+![hacktoberfestStatus](http://badge.hacktoberfestkorea.com/?githubUserName=phg98)
 
 
+핵토버페스트 참가자 개인 프로필 화면에 넣을 수 있도록 현재 인정된 PR개수를 표시하는 배지
+[resten님의 군복무 D-Day 배지](https://github.com/Resten1497/soldier_badge)를 기반으로 만들어 보았습니다.
+PR개수를 체크하는 서버는 [Hacktoberfest Checker](https://hacktoberfestchecker.jenko.me)를 그대로 사용해서 실행하였습니다.
 
-현재 군 복무 중인 개발자 분들을 위해 만들었습니다.  
-일반 Github Badge와 동일한 방식을 가지고 있습니다.
+
+
+## Dependency
+[Shield.io](https://shields.io/)
 
 
 ## Usage
 
 ```markdown
-![soldierDate](http://goonba.xyz/?endDate=YYYYMMDD&division=DIVISION)
+![hacktoberfestStatus](http://badge.hacktoberfestkorea.com/?githubUserName=MyGithubId)
 ```
-
-> `YYYYMMDD`를 `전역일자`로 변경해주세요. ( 예시 : 20211218 )  
-> `DIVISION` 군별 지정은 `Optional` 이며, 아래와 같은 Parameter를 가집니다. 
-
-- army : 육군 **(default)**
-- navy : 해군 
-- marine : 해병대 
-- airforce : 공군  
-
-
+> `MyGithubId`를 본인의 깃헙 ID로 변경해주세요. 
 
 ## Configuration & Setup
 
 ### Project Cloning
 
 ```sh
-https://github.com/Resten1497/soldier_badge
-cd soldier_badge
+https://github.com/phg98/hacktoberfest-badge
+cd hacktoberfest-badge
 npm i
 ```
 
@@ -57,13 +50,9 @@ npm start # 서버 PORT 기본 값 = 3000
 ## Contribute  
 Update Please  
 
-## Dependency
-[Shield.io](https://shields.io/)
-
-
 ## Questions
 
-* GitHub - [open issue](https://github.com/Resten1497/soldier_badge/issues)
+* GitHub - [open issue](https://github.com/phg98/hacktoberfest-badge/issues)
 
 ## License
 Update Please

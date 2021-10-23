@@ -6,7 +6,7 @@ import axios from 'axios';
  * @param color 색상을 인자로 받습니다.
  * @returns SVG String
  */
-export async function createBadge(githubUserName:string, color = '00FFFF') {
+export async function createBadge(githubUserName:string, color:string = '00FFFF') {
 
 	let prsUrl = `https://badge.hacktoberfestkorea.com:5000/prs?username=${githubUserName}`
 	console.log(prsUrl)

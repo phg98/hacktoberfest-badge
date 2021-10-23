@@ -21,17 +21,17 @@ export async function badgeRouter(req: express.Request, res: express.Response): 
 		sendText('400 Bad Request', res);
 		return;
 	}
-	const githubUserName = req.query.githubUserName;
-	const color = req.query.color;
+	const githubUserName = req.query.githubUserName as string;
+	const color = req.query.color as string;
 	console.debug(githubUserName)
 
 	res.set('Content-Type','image/svg+xml');
 	res.set('Cache-Control', 'no-cache');
 
 	if (color) {
-		res.send(await createBadge(githubUserName));
-	} else {
 		res.send(await createBadge(githubUserName, color));
+	} else {
+		res.send(await createBadge(githubUserName));
 	}
 
 }

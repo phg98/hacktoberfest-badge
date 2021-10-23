@@ -4,12 +4,12 @@
 
 
 핵토버페스트 참가자 개인 프로필 화면에 넣을 수 있도록 현재 인정된 PR개수를 표시하는 배지  
-[resten님의 군복무 D-Day 배지](https://github.com/Resten1497/soldier_badge)를 기반으로 만들어 보았습니다. 
-PR개수를 체크하는 서버는 [Hacktoberfest Checker](https://hacktoberfestchecker.jenko.me)를 그대로 사용해서 실행하였습니다.
+[resten님의 군복무 D-Day 배지](https://github.com/Resten1497/soldier_badge)를 기반으로 만들어 보았습니다.  
+PR개수를 체크하는 서버는 [Hacktoberfest Checker](https://hacktoberfestchecker.jenko.me)를 그대로 사용해서 실행하였습니다.  
 
 * 유의사항
-** Exclude된 PR은 확인되지 않으므로 정확하지는 않습니다. 정확한 확인은 [핵토버페스트 홈페이지](https://hacktoberfest.digitalocean.com/)에서 확인해주세요.
-** 행사 등록 여부는 확인되지 않습니다.
+  * Exclude된 PR은 확인되지 않으므로 정확하지는 않습니다. 정확한 확인은 [핵토버페스트 홈페이지](https://hacktoberfest.digitalocean.com/)에서 확인해주세요.
+  * 행사 등록 여부는 확인되지 않습니다.
 
 
 ## Dependency

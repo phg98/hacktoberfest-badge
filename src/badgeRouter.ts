@@ -22,11 +22,16 @@ export async function badgeRouter(req: express.Request, res: express.Response): 
 		return;
 	}
 	const githubUserName = req.query.githubUserName;
-
+	const color = req.query.color;
 	console.debug(githubUserName)
-	
+
 	res.set('Content-Type','image/svg+xml');
 	res.set('Cache-Control', 'no-cache');
 
-	res.send(await createBadge(githubUserName));
+	if (color) {
+		res.send(await createBadge(githubUserName));
+	} else {
+		res.send(await createBadge(githubUserName, color));
+	}
+
 }

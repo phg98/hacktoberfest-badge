@@ -23,6 +23,12 @@ Badge for Hacktoberfest participants. Display PR count.
 ```
 > Put your Github ID in `MyGithubId`. 
 
+```markdown
+![hacktoberfestStatus](http://badge.hacktoberfestkorea.com/?githubUserName=MyGithubId&color=00FFFF)
+```
+> Put the RGB code you want `color` to be.
+
+
 ## Configuration & Setup
 
 ### Build

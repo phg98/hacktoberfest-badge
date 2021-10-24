@@ -24,6 +24,12 @@ PR개수를 체크하는 서버는 @jenkoian 님의 [Hacktoberfest Checker](http
 ```
 > `MyGithubId`를 본인의 깃헙 ID로 변경해주세요. 
 
+
+```markdown
+![hacktoberfestStatus](http://badge.hacktoberfestkorea.com/?githubUserName=MyGithubId&color=00FFFF)
+```
+> `color`를 원하는 RGB코드를 추가로 입력해주세요.
+
 ## Configuration & Setup
 
 ### Project Cloning

@@ -2,6 +2,7 @@
 
 ![hacktoberfestStatus](http://badge.hacktoberfestkorea.com/?githubUserName=phg98)
 
+*Read this in other languages: [한국어](README.md), [English](README.en.md) *
 
 핵토버페스트 참가자 개인 프로필 화면에 넣을 수 있도록 현재 인정된 PR개수를 표시하는 배지  
 @Resten1497 님의 [군복무 D-Day 배지](https://github.com/Resten1497/soldier_badge)를 기반으로 만들어 보았습니다.  

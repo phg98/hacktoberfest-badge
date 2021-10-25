@@ -8,7 +8,7 @@ import axios from 'axios';
  */
 export async function createBadge(githubUserName:string, color:string = '00FFFF') {
 
-	let prsUrl = `https://badge.hacktoberfestkorea.com:5000/prs?username=${githubUserName}`
+	let prsUrl = `http://badge.hacktoberfestkorea.com:5000/prs?username=${githubUserName}`
 	console.log(prsUrl)
 	let prsData = await axios.get(prsUrl)
 	console.log(prsData.data.prs)

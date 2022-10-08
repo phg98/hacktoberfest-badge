@@ -1,10 +1,6 @@
 import express from 'express';
-import { active } from 'colorful-debugger';
 import { badgeRouter } from './badgeRouter';
 import { sendText } from './sendText';
-
-// console log, info, warn, error를 보기 좋게 개선해 줌 - JeongHyeon Kim 2021.09.26
-active();
 
 const app = express();
 

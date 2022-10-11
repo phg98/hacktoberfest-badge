@@ -1,13 +1,6 @@
 import express from 'express';
-// import dayjs from 'dayjs';
-// import timezone from 'dayjs/plugin/timezone';
-// import utc from 'dayjs/plugin/utc';
 import { createBadge } from './createBadge';
 import { sendText } from './sendText';
-
-
-// dayjs.extend(utc);
-// dayjs.extend(timezone);
 
 /**
  * Badge를 만들어 주는 Router 입니다.

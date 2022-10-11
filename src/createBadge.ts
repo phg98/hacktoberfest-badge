@@ -7,17 +7,16 @@ import axios from 'axios';
  * @returns SVG String
  */
 export async function createBadge(githubUserName:string, color:string = '00FFFF') {
-
-	let prsUrl = `http://badge.hacktoberfestkorea.com:5000/prs?username=${githubUserName}`
-	console.log(prsUrl)
-	let prsData = await axios.get(prsUrl)
-	console.log(prsData.data.prs)
-	let prs = prsData.data.prs.length
+	let prsUrl = `http://badge.hacktoberfestkorea.com:5000/prs?username=${githubUserName}`;
+	console.log(prsUrl);
+	let prsData = await axios.get(prsUrl);
+	console.log(prsData.data.prs);
+	let prs = prsData.data.prs.length;
 	let url =  `https://img.shields.io/badge/HacktoberfestPRs- ${prs}/4 -${color}`;
-	console.debug(url)
-	let svg = await downloadSvg(url)
+	console.debug(url);
+	let svg = await downloadSvg(url);
+	
 	return svg.data;
-
 }
 
 
@@ -28,5 +27,5 @@ export async function createBadge(githubUserName:string, color:string = '00FFFF'
  */
 
 function downloadSvg(url : string) {
-		return axios.get(url);
+	return axios.get(url);
 }
